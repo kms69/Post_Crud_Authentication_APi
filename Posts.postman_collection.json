@@ -1,0 +1,343 @@
+{
+	"info": {
+		"_postman_id": "9ca688d0-e940-40ef-92d0-e235ce02952c",
+		"name": "Posts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17608241"
+	},
+	"item": [
+		{
+			"name": "User/Register",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "james",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "james@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User/Login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "james@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post/Create",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzc2YmY1YWUzMjcxYmFmMGY3YTZjZjg4ZTQzZjkzYTExYzQzNzlkNDgwYjJiYjc4ZWE4ZWI1NDA1ZTZkNGE4NDYxNDE1MzE1MjcxYzIwNjEiLCJpYXQiOjE2NTM3MTg1MjMuODI0OTA4LCJuYmYiOjE2NTM3MTg1MjMuODI0OTE3LCJleHAiOjE2ODUyNTQ1MjMuODE2MTI5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgTqL1p2DKm_DMmImHAStDe01pEuIJjiLWaVYvKMmizwn6S3zVkZCc_Kz4U2cubNkjM_hRnJfP1ykS6fPbLCA4SHZtRO8BnQ8-FCDO9cgd5LL-eZZyX2d5MXvW-jUnWdxAz0PlYLqZA5g9o3o05LbvjuSAMKkhyo8XmPZdaTC2IrTcT7A1X2leEdTuLSVbC4D7WUFYzPY0ElaAON4aSmPtWHhVg1CJUdfT1-ZAtvgQ1teQ4-zt3f-ONBzBrUsUHeNFpDy8KYwsmYVJMYasADe2kvHHZw8p5KCpLyIaiJTQQ28YoMFuBb2OdtuxqTg6tpjFuXLxAt6MozySc8dJNJA9vEhSNT1I6HPUnwX_DrcNxkifUCF8Grrf26Dj9csu-1JPDy8M0lER5NjSP8Qy_Ltm8R-XIBlnQ2RVrGfGYDOao5EdsDQB9SO9gmITS3r6LKLufv237DmdjKna9i2hd9aoNszFXugPHUqJBWj6ahq0sou5LQXmSRl2wsW6fAVKb29adsi3EOtgyZt4RyyAVQnnNJ1DOGOXTUhz2pkQ-3TQQwHLsZYeBLXur_yGpSyOUg-hp4J07KMQz-rcH-MYO20lI23eXDwyTUbDUyf-p4mxosYWWbZKP_-AZJZGBVrPRwY9ZKuFruM2wDdN1vHJb-Bid1dlBAimdQFjQN-Jz2mGo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post/Update",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzc2YmY1YWUzMjcxYmFmMGY3YTZjZjg4ZTQzZjkzYTExYzQzNzlkNDgwYjJiYjc4ZWE4ZWI1NDA1ZTZkNGE4NDYxNDE1MzE1MjcxYzIwNjEiLCJpYXQiOjE2NTM3MTg1MjMuODI0OTA4LCJuYmYiOjE2NTM3MTg1MjMuODI0OTE3LCJleHAiOjE2ODUyNTQ1MjMuODE2MTI5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgTqL1p2DKm_DMmImHAStDe01pEuIJjiLWaVYvKMmizwn6S3zVkZCc_Kz4U2cubNkjM_hRnJfP1ykS6fPbLCA4SHZtRO8BnQ8-FCDO9cgd5LL-eZZyX2d5MXvW-jUnWdxAz0PlYLqZA5g9o3o05LbvjuSAMKkhyo8XmPZdaTC2IrTcT7A1X2leEdTuLSVbC4D7WUFYzPY0ElaAON4aSmPtWHhVg1CJUdfT1-ZAtvgQ1teQ4-zt3f-ONBzBrUsUHeNFpDy8KYwsmYVJMYasADe2kvHHZw8p5KCpLyIaiJTQQ28YoMFuBb2OdtuxqTg6tpjFuXLxAt6MozySc8dJNJA9vEhSNT1I6HPUnwX_DrcNxkifUCF8Grrf26Dj9csu-1JPDy8M0lER5NjSP8Qy_Ltm8R-XIBlnQ2RVrGfGYDOao5EdsDQB9SO9gmITS3r6LKLufv237DmdjKna9i2hd9aoNszFXugPHUqJBWj6ahq0sou5LQXmSRl2wsW6fAVKb29adsi3EOtgyZt4RyyAVQnnNJ1DOGOXTUhz2pkQ-3TQQwHLsZYeBLXur_yGpSyOUg-hp4J07KMQz-rcH-MYO20lI23eXDwyTUbDUyf-p4mxosYWWbZKP_-AZJZGBVrPRwY9ZKuFruM2wDdN1vHJb-Bid1dlBAimdQFjQN-Jz2mGo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "The Old man ",
+							"type": "text"
+						},
+						{
+							"key": "body ",
+							"value": "The old man and the sea ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post/Show",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzc2YmY1YWUzMjcxYmFmMGY3YTZjZjg4ZTQzZjkzYTExYzQzNzlkNDgwYjJiYjc4ZWE4ZWI1NDA1ZTZkNGE4NDYxNDE1MzE1MjcxYzIwNjEiLCJpYXQiOjE2NTM3MTg1MjMuODI0OTA4LCJuYmYiOjE2NTM3MTg1MjMuODI0OTE3LCJleHAiOjE2ODUyNTQ1MjMuODE2MTI5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgTqL1p2DKm_DMmImHAStDe01pEuIJjiLWaVYvKMmizwn6S3zVkZCc_Kz4U2cubNkjM_hRnJfP1ykS6fPbLCA4SHZtRO8BnQ8-FCDO9cgd5LL-eZZyX2d5MXvW-jUnWdxAz0PlYLqZA5g9o3o05LbvjuSAMKkhyo8XmPZdaTC2IrTcT7A1X2leEdTuLSVbC4D7WUFYzPY0ElaAON4aSmPtWHhVg1CJUdfT1-ZAtvgQ1teQ4-zt3f-ONBzBrUsUHeNFpDy8KYwsmYVJMYasADe2kvHHZw8p5KCpLyIaiJTQQ28YoMFuBb2OdtuxqTg6tpjFuXLxAt6MozySc8dJNJA9vEhSNT1I6HPUnwX_DrcNxkifUCF8Grrf26Dj9csu-1JPDy8M0lER5NjSP8Qy_Ltm8R-XIBlnQ2RVrGfGYDOao5EdsDQB9SO9gmITS3r6LKLufv237DmdjKna9i2hd9aoNszFXugPHUqJBWj6ahq0sou5LQXmSRl2wsW6fAVKb29adsi3EOtgyZt4RyyAVQnnNJ1DOGOXTUhz2pkQ-3TQQwHLsZYeBLXur_yGpSyOUg-hp4J07KMQz-rcH-MYO20lI23eXDwyTUbDUyf-p4mxosYWWbZKP_-AZJZGBVrPRwY9ZKuFruM2wDdN1vHJb-Bid1dlBAimdQFjQN-Jz2mGo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "The Old man ",
+							"type": "text"
+						},
+						{
+							"key": "body ",
+							"value": "The old man and the sea ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post/Delete",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzc2YmY1YWUzMjcxYmFmMGY3YTZjZjg4ZTQzZjkzYTExYzQzNzlkNDgwYjJiYjc4ZWE4ZWI1NDA1ZTZkNGE4NDYxNDE1MzE1MjcxYzIwNjEiLCJpYXQiOjE2NTM3MTg1MjMuODI0OTA4LCJuYmYiOjE2NTM3MTg1MjMuODI0OTE3LCJleHAiOjE2ODUyNTQ1MjMuODE2MTI5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.TgTqL1p2DKm_DMmImHAStDe01pEuIJjiLWaVYvKMmizwn6S3zVkZCc_Kz4U2cubNkjM_hRnJfP1ykS6fPbLCA4SHZtRO8BnQ8-FCDO9cgd5LL-eZZyX2d5MXvW-jUnWdxAz0PlYLqZA5g9o3o05LbvjuSAMKkhyo8XmPZdaTC2IrTcT7A1X2leEdTuLSVbC4D7WUFYzPY0ElaAON4aSmPtWHhVg1CJUdfT1-ZAtvgQ1teQ4-zt3f-ONBzBrUsUHeNFpDy8KYwsmYVJMYasADe2kvHHZw8p5KCpLyIaiJTQQ28YoMFuBb2OdtuxqTg6tpjFuXLxAt6MozySc8dJNJA9vEhSNT1I6HPUnwX_DrcNxkifUCF8Grrf26Dj9csu-1JPDy8M0lER5NjSP8Qy_Ltm8R-XIBlnQ2RVrGfGYDOao5EdsDQB9SO9gmITS3r6LKLufv237DmdjKna9i2hd9aoNszFXugPHUqJBWj6ahq0sou5LQXmSRl2wsW6fAVKb29adsi3EOtgyZt4RyyAVQnnNJ1DOGOXTUhz2pkQ-3TQQwHLsZYeBLXur_yGpSyOUg-hp4J07KMQz-rcH-MYO20lI23eXDwyTUbDUyf-p4mxosYWWbZKP_-AZJZGBVrPRwY9ZKuFruM2wDdN1vHJb-Bid1dlBAimdQFjQN-Jz2mGo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "The Old man ",
+							"type": "text"
+						},
+						{
+							"key": "body ",
+							"value": "The old man and the sea ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/posts/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
